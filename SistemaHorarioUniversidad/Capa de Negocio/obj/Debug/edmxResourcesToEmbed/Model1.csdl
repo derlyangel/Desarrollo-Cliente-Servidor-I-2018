@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HorariosIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Aula">
+    <Key>
+      <PropertyRef Name="IdAula" />
+    </Key>
+    <Property Name="IdAula" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Capacidad_Aula" Type="Int32" />
+    <Property Name="IdPabellon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="Id_tipo_aula" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tipo_aula" Relationship="Self.FK__Aula__Id_tipo_au__5812160E" FromRole="Aula" ToRole="tipo_aula" />
+    <NavigationProperty Name="Pabellon" Relationship="Self.FK__Aula__IdPabellon__571DF1D5" FromRole="Aula" ToRole="Pabellon" />
+    <NavigationProperty Name="Docente" Relationship="Self.FK__Docente__IdAula__5EBF139D" FromRole="Aula" ToRole="Docente" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__fk_d___628FA481" FromRole="Aula" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="capacidad">
+    <Key>
+      <PropertyRef Name="idcapacidad" />
+    </Key>
+    <Property Name="idcapacidad" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad" Type="Int32" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__IdCap__656C112C" FromRole="capacidad" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="Ciclo">
+    <Key>
+      <PropertyRef Name="IdCiclo" />
+    </Key>
+    <Property Name="IdCiclo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+    <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK__Curso__IdCiclo__38996AB5" FromRole="Ciclo" ToRole="Curso" />
+  </EntityType>
+  <EntityType Name="clasificacion">
+    <Key>
+      <PropertyRef Name="idclasificacion" />
+    </Key>
+    <Property Name="idclasificacion" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="tipo" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__IdCla__66603565" FromRole="clasificacion" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="Curso">
+    <Key>
+      <PropertyRef Name="IdCurso" />
+    </Key>
+    <Property Name="IdCurso" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IdEscuela" Type="Int32" />
+    <Property Name="IdCiclo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Ciclo" Relationship="Self.FK__Curso__IdCiclo__38996AB5" FromRole="Curso" ToRole="Ciclo" />
+    <NavigationProperty Name="Escuela" Relationship="Self.FK__Curso__IdEscuela__37A5467C" FromRole="Curso" ToRole="Escuela" />
+    <NavigationProperty Name="Plan_Estudio" Relationship="Self.FK__Plan_Estu__IdCur__3B75D760" FromRole="Curso" ToRole="Plan_Estudio" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__Fk_id__693CA210" FromRole="Curso" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="Descrip_Pabellon">
+    <Key>
+      <PropertyRef Name="IdDescripPabellon" />
+    </Key>
+    <Property Name="IdDescripPabellon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Pabellon" Relationship="Self.FK__Pabellon__IdDesc__403A8C7D" FromRole="Descrip_Pabellon" ToRole="Pabellon" />
+  </EntityType>
+  <EntityType Name="dia">
+    <Key>
+      <PropertyRef Name="iddia" />
+    </Key>
+    <Property Name="iddia" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__IdDia__6477ECF3" FromRole="dia" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="Docente">
+    <Key>
+      <PropertyRef Name="IdCodigo" />
+    </Key>
+    <Property Name="IdCodigo" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DNI" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Estado_Servicio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Celular" Type="Int32" Nullable="false" />
+    <Property Name="Direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdTipoDocente" Type="Int32" Nullable="false" />
+    <Property Name="IdGrado" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdFacultad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sexo" Type="Boolean" />
+    <Property Name="IdAula" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Aula" Relationship="Self.FK__Docente__IdAula__5EBF139D" FromRole="Docente" ToRole="Aula" />
+    <NavigationProperty Name="Facultad" Relationship="Self.FK__Docente__IdFacul__5DCAEF64" FromRole="Docente" ToRole="Facultad" />
+    <NavigationProperty Name="Grado_Docente" Relationship="Self.FK__Docente__IdGrado__5CD6CB2B" FromRole="Docente" ToRole="Grado_Docente" />
+    <NavigationProperty Name="Tipo_Docente" Relationship="Self.FK__Docente__IdTipoD__5BE2A6F2" FromRole="Docente" ToRole="Tipo_Docente" />
+  </EntityType>
+  <EntityType Name="Escuela">
+    <Key>
+      <PropertyRef Name="IdEscuela" />
+    </Key>
+    <Property Name="IdEscuela" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IdFacultad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK__Curso__IdEscuela__37A5467C" FromRole="Escuela" ToRole="Curso" />
+    <NavigationProperty Name="Facultad" Relationship="Self.FK__Escuela__IdFacul__34C8D9D1" FromRole="Escuela" ToRole="Facultad" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__IdEsc__68487DD7" FromRole="Escuela" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="Facultad">
+    <Key>
+      <PropertyRef Name="IdFacultad" />
+    </Key>
+    <Property Name="IdFacultad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Docente" Relationship="Self.FK__Docente__IdFacul__5DCAEF64" FromRole="Facultad" ToRole="Docente" />
+    <NavigationProperty Name="Escuela" Relationship="Self.FK__Escuela__IdFacul__34C8D9D1" FromRole="Facultad" ToRole="Escuela" />
+  </EntityType>
+  <EntityType Name="fecha">
+    <Key>
+      <PropertyRef Name="idfecha" />
+    </Key>
+    <Property Name="idfecha" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_inicio" Type="DateTime" Precision="0" />
+    <Property Name="fecha_fin" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__fk_Id__619B8048" FromRole="fecha" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="Grado_Docente">
+    <Key>
+      <PropertyRef Name="IdGrado" />
+    </Key>
+    <Property Name="IdGrado" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Docente" Relationship="Self.FK__Docente__IdGrado__5CD6CB2B" FromRole="Grado_Docente" ToRole="Docente" />
+  </EntityType>
+  <EntityType Name="hora">
+    <Key>
+      <PropertyRef Name="idhora" />
+    </Key>
+    <Property Name="idhora" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Hora_inicio" Type="DateTime" Precision="0" />
+    <Property Name="Hora_fin" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__IdHor__6383C8BA" FromRole="hora" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="Pabellon">
+    <Key>
+      <PropertyRef Name="IdPabellon" />
+    </Key>
+    <Property Name="IdPabellon" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Capacidad_total_Pabellon" Type="Int32" />
+    <Property Name="Fecha_Registro" Type="DateTime" Precision="0" />
+    <Property Name="IdDescripPabellon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Aula" Relationship="Self.FK__Aula__IdPabellon__571DF1D5" FromRole="Pabellon" ToRole="Aula" />
+    <NavigationProperty Name="Descrip_Pabellon" Relationship="Self.FK__Pabellon__IdDesc__403A8C7D" FromRole="Pabellon" ToRole="Descrip_Pabellon" />
+  </EntityType>
+  <EntityType Name="Plan_Estudio">
+    <Key>
+      <PropertyRef Name="IdPlan" />
+    </Key>
+    <Property Name="IdPlan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IdCurso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK__Plan_Estu__IdCur__3B75D760" FromRole="Plan_Estudio" ToRole="Curso" />
+  </EntityType>
+  <EntityType Name="recuperaciones">
+    <Key>
+      <PropertyRef Name="idrecuperaciones" />
+    </Key>
+    <Property Name="idrecuperaciones" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="fk_IdFecha" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fk_d_Aula" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdHora" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdDia" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCapacidad" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdClasificacion" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdSeccion" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdEscuela" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fk_idcurso" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Aula" Relationship="Self.FK__recuperac__fk_d___628FA481" FromRole="recuperaciones" ToRole="Aula" />
+    <NavigationProperty Name="capacidad" Relationship="Self.FK__recuperac__IdCap__656C112C" FromRole="recuperaciones" ToRole="capacidad" />
+    <NavigationProperty Name="clasificacion" Relationship="Self.FK__recuperac__IdCla__66603565" FromRole="recuperaciones" ToRole="clasificacion" />
+    <NavigationProperty Name="Curso" Relationship="Self.FK__recuperac__Fk_id__693CA210" FromRole="recuperaciones" ToRole="Curso" />
+    <NavigationProperty Name="dia" Relationship="Self.FK__recuperac__IdDia__6477ECF3" FromRole="recuperaciones" ToRole="dia" />
+    <NavigationProperty Name="Escuela" Relationship="Self.FK__recuperac__IdEsc__68487DD7" FromRole="recuperaciones" ToRole="Escuela" />
+    <NavigationProperty Name="fecha" Relationship="Self.FK__recuperac__fk_Id__619B8048" FromRole="recuperaciones" ToRole="fecha" />
+    <NavigationProperty Name="hora" Relationship="Self.FK__recuperac__IdHor__6383C8BA" FromRole="recuperaciones" ToRole="hora" />
+    <NavigationProperty Name="seccion" Relationship="Self.FK__recuperac__IdSec__6754599E" FromRole="recuperaciones" ToRole="seccion" />
+  </EntityType>
+  <EntityType Name="seccion">
+    <Key>
+      <PropertyRef Name="idseccion" />
+    </Key>
+    <Property Name="idseccion" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="recuperaciones" Relationship="Self.FK__recuperac__IdSec__6754599E" FromRole="seccion" ToRole="recuperaciones" />
+  </EntityType>
+  <EntityType Name="semestre">
+    <Key>
+      <PropertyRef Name="idsemestre" />
+    </Key>
+    <Property Name="idsemestre" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tipo_aula">
+    <Key>
+      <PropertyRef Name="id_tipo_aula" />
+    </Key>
+    <Property Name="id_tipo_aula" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Aula" Relationship="Self.FK__Aula__Id_tipo_au__5812160E" FromRole="tipo_aula" ToRole="Aula" />
+  </EntityType>
+  <EntityType Name="Tipo_Docente">
+    <Key>
+      <PropertyRef Name="IdTipoDocente" />
+    </Key>
+    <Property Name="IdTipoDocente" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Docente" Relationship="Self.FK__Docente__IdTipoD__5BE2A6F2" FromRole="Tipo_Docente" ToRole="Docente" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contraseña" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Aula__Id_tipo_au__5812160E">
+    <End Role="tipo_aula" Type="Self.tipo_aula" Multiplicity="0..1" />
+    <End Role="Aula" Type="Self.Aula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_aula">
+        <PropertyRef Name="id_tipo_aula" />
+      </Principal>
+      <Dependent Role="Aula">
+        <PropertyRef Name="Id_tipo_aula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Aula__IdPabellon__571DF1D5">
+    <End Role="Pabellon" Type="Self.Pabellon" Multiplicity="0..1" />
+    <End Role="Aula" Type="Self.Aula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pabellon">
+        <PropertyRef Name="IdPabellon" />
+      </Principal>
+      <Dependent Role="Aula">
+        <PropertyRef Name="IdPabellon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Docente__IdAula__5EBF139D">
+    <End Role="Aula" Type="Self.Aula" Multiplicity="1" />
+    <End Role="Docente" Type="Self.Docente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aula">
+        <PropertyRef Name="IdAula" />
+      </Principal>
+      <Dependent Role="Docente">
+        <PropertyRef Name="IdAula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__fk_d___628FA481">
+    <End Role="Aula" Type="Self.Aula" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aula">
+        <PropertyRef Name="IdAula" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="fk_d_Aula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__IdCap__656C112C">
+    <End Role="capacidad" Type="Self.capacidad" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="capacidad">
+        <PropertyRef Name="idcapacidad" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="IdCapacidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Curso__IdCiclo__38996AB5">
+    <End Role="Ciclo" Type="Self.Ciclo" Multiplicity="0..1" />
+    <End Role="Curso" Type="Self.Curso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciclo">
+        <PropertyRef Name="IdCiclo" />
+      </Principal>
+      <Dependent Role="Curso">
+        <PropertyRef Name="IdCiclo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__IdCla__66603565">
+    <End Role="clasificacion" Type="Self.clasificacion" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clasificacion">
+        <PropertyRef Name="idclasificacion" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="IdClasificacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Curso__IdEscuela__37A5467C">
+    <End Role="Escuela" Type="Self.Escuela" Multiplicity="0..1" />
+    <End Role="Curso" Type="Self.Curso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="Curso">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Plan_Estu__IdCur__3B75D760">
+    <End Role="Curso" Type="Self.Curso" Multiplicity="1" />
+    <End Role="Plan_Estudio" Type="Self.Plan_Estudio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curso">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="Plan_Estudio">
+        <PropertyRef Name="IdCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__Fk_id__693CA210">
+    <End Role="Curso" Type="Self.Curso" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curso">
+        <PropertyRef Name="IdCurso" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="Fk_idcurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Pabellon__IdDesc__403A8C7D">
+    <End Role="Descrip_Pabellon" Type="Self.Descrip_Pabellon" Multiplicity="1" />
+    <End Role="Pabellon" Type="Self.Pabellon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Descrip_Pabellon">
+        <PropertyRef Name="IdDescripPabellon" />
+      </Principal>
+      <Dependent Role="Pabellon">
+        <PropertyRef Name="IdDescripPabellon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__IdDia__6477ECF3">
+    <End Role="dia" Type="Self.dia" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="dia">
+        <PropertyRef Name="iddia" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="IdDia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Docente__IdFacul__5DCAEF64">
+    <End Role="Facultad" Type="Self.Facultad" Multiplicity="1" />
+    <End Role="Docente" Type="Self.Docente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facultad">
+        <PropertyRef Name="IdFacultad" />
+      </Principal>
+      <Dependent Role="Docente">
+        <PropertyRef Name="IdFacultad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Docente__IdGrado__5CD6CB2B">
+    <End Role="Grado_Docente" Type="Self.Grado_Docente" Multiplicity="1" />
+    <End Role="Docente" Type="Self.Docente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grado_Docente">
+        <PropertyRef Name="IdGrado" />
+      </Principal>
+      <Dependent Role="Docente">
+        <PropertyRef Name="IdGrado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Docente__IdTipoD__5BE2A6F2">
+    <End Role="Tipo_Docente" Type="Self.Tipo_Docente" Multiplicity="1" />
+    <End Role="Docente" Type="Self.Docente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Docente">
+        <PropertyRef Name="IdTipoDocente" />
+      </Principal>
+      <Dependent Role="Docente">
+        <PropertyRef Name="IdTipoDocente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Escuela__IdFacul__34C8D9D1">
+    <End Role="Facultad" Type="Self.Facultad" Multiplicity="1" />
+    <End Role="Escuela" Type="Self.Escuela" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facultad">
+        <PropertyRef Name="IdFacultad" />
+      </Principal>
+      <Dependent Role="Escuela">
+        <PropertyRef Name="IdFacultad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__IdEsc__68487DD7">
+    <End Role="Escuela" Type="Self.Escuela" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Escuela">
+        <PropertyRef Name="IdEscuela" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="IdEscuela" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__fk_Id__619B8048">
+    <End Role="fecha" Type="Self.fecha" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="fecha">
+        <PropertyRef Name="idfecha" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="fk_IdFecha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__IdHor__6383C8BA">
+    <End Role="hora" Type="Self.hora" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hora">
+        <PropertyRef Name="idhora" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="IdHora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__recuperac__IdSec__6754599E">
+    <End Role="seccion" Type="Self.seccion" Multiplicity="1" />
+    <End Role="recuperaciones" Type="Self.recuperaciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="seccion">
+        <PropertyRef Name="idseccion" />
+      </Principal>
+      <Dependent Role="recuperaciones">
+        <PropertyRef Name="IdSeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HorariosIEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Aula" EntityType="Self.Aula" />
+    <EntitySet Name="capacidad" EntityType="Self.capacidad" />
+    <EntitySet Name="Ciclo" EntityType="Self.Ciclo" />
+    <EntitySet Name="clasificacion" EntityType="Self.clasificacion" />
+    <EntitySet Name="Curso" EntityType="Self.Curso" />
+    <EntitySet Name="Descrip_Pabellon" EntityType="Self.Descrip_Pabellon" />
+    <EntitySet Name="dia" EntityType="Self.dia" />
+    <EntitySet Name="Docente" EntityType="Self.Docente" />
+    <EntitySet Name="Escuela" EntityType="Self.Escuela" />
+    <EntitySet Name="Facultad" EntityType="Self.Facultad" />
+    <EntitySet Name="fecha" EntityType="Self.fecha" />
+    <EntitySet Name="Grado_Docente" EntityType="Self.Grado_Docente" />
+    <EntitySet Name="hora" EntityType="Self.hora" />
+    <EntitySet Name="Pabellon" EntityType="Self.Pabellon" />
+    <EntitySet Name="Plan_Estudio" EntityType="Self.Plan_Estudio" />
+    <EntitySet Name="recuperaciones" EntityType="Self.recuperaciones" />
+    <EntitySet Name="seccion" EntityType="Self.seccion" />
+    <EntitySet Name="semestre" EntityType="Self.semestre" />
+    <EntitySet Name="tipo_aula" EntityType="Self.tipo_aula" />
+    <EntitySet Name="Tipo_Docente" EntityType="Self.Tipo_Docente" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" />
+    <AssociationSet Name="FK__Aula__Id_tipo_au__5812160E" Association="Self.FK__Aula__Id_tipo_au__5812160E">
+      <End Role="tipo_aula" EntitySet="tipo_aula" />
+      <End Role="Aula" EntitySet="Aula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Aula__IdPabellon__571DF1D5" Association="Self.FK__Aula__IdPabellon__571DF1D5">
+      <End Role="Pabellon" EntitySet="Pabellon" />
+      <End Role="Aula" EntitySet="Aula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Docente__IdAula__5EBF139D" Association="Self.FK__Docente__IdAula__5EBF139D">
+      <End Role="Aula" EntitySet="Aula" />
+      <End Role="Docente" EntitySet="Docente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__fk_d___628FA481" Association="Self.FK__recuperac__fk_d___628FA481">
+      <End Role="Aula" EntitySet="Aula" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__IdCap__656C112C" Association="Self.FK__recuperac__IdCap__656C112C">
+      <End Role="capacidad" EntitySet="capacidad" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Curso__IdCiclo__38996AB5" Association="Self.FK__Curso__IdCiclo__38996AB5">
+      <End Role="Ciclo" EntitySet="Ciclo" />
+      <End Role="Curso" EntitySet="Curso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__IdCla__66603565" Association="Self.FK__recuperac__IdCla__66603565">
+      <End Role="clasificacion" EntitySet="clasificacion" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Curso__IdEscuela__37A5467C" Association="Self.FK__Curso__IdEscuela__37A5467C">
+      <End Role="Escuela" EntitySet="Escuela" />
+      <End Role="Curso" EntitySet="Curso" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Plan_Estu__IdCur__3B75D760" Association="Self.FK__Plan_Estu__IdCur__3B75D760">
+      <End Role="Curso" EntitySet="Curso" />
+      <End Role="Plan_Estudio" EntitySet="Plan_Estudio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__Fk_id__693CA210" Association="Self.FK__recuperac__Fk_id__693CA210">
+      <End Role="Curso" EntitySet="Curso" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Pabellon__IdDesc__403A8C7D" Association="Self.FK__Pabellon__IdDesc__403A8C7D">
+      <End Role="Descrip_Pabellon" EntitySet="Descrip_Pabellon" />
+      <End Role="Pabellon" EntitySet="Pabellon" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__IdDia__6477ECF3" Association="Self.FK__recuperac__IdDia__6477ECF3">
+      <End Role="dia" EntitySet="dia" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Docente__IdFacul__5DCAEF64" Association="Self.FK__Docente__IdFacul__5DCAEF64">
+      <End Role="Facultad" EntitySet="Facultad" />
+      <End Role="Docente" EntitySet="Docente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Docente__IdGrado__5CD6CB2B" Association="Self.FK__Docente__IdGrado__5CD6CB2B">
+      <End Role="Grado_Docente" EntitySet="Grado_Docente" />
+      <End Role="Docente" EntitySet="Docente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Docente__IdTipoD__5BE2A6F2" Association="Self.FK__Docente__IdTipoD__5BE2A6F2">
+      <End Role="Tipo_Docente" EntitySet="Tipo_Docente" />
+      <End Role="Docente" EntitySet="Docente" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Escuela__IdFacul__34C8D9D1" Association="Self.FK__Escuela__IdFacul__34C8D9D1">
+      <End Role="Facultad" EntitySet="Facultad" />
+      <End Role="Escuela" EntitySet="Escuela" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__IdEsc__68487DD7" Association="Self.FK__recuperac__IdEsc__68487DD7">
+      <End Role="Escuela" EntitySet="Escuela" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__fk_Id__619B8048" Association="Self.FK__recuperac__fk_Id__619B8048">
+      <End Role="fecha" EntitySet="fecha" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__IdHor__6383C8BA" Association="Self.FK__recuperac__IdHor__6383C8BA">
+      <End Role="hora" EntitySet="hora" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK__recuperac__IdSec__6754599E" Association="Self.FK__recuperac__IdSec__6754599E">
+      <End Role="seccion" EntitySet="seccion" />
+      <End Role="recuperaciones" EntitySet="recuperaciones" />
+    </AssociationSet>
+    <FunctionImport Name="usp_ValidarContraseña" ReturnType="Collection(HorariosIModel.usp_ValidarContraseña_Result)">
+      <Parameter Name="prmContraseña" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_ValidarUsuario" ReturnType="Collection(HorariosIModel.usp_ValidarUsuario_Result)">
+      <Parameter Name="prmUsuario" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="usp_ValidarContraseña_Result">
+    <Property Type="String" Name="id" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="contraseña" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="usp_ValidarUsuario_Result">
+    <Property Type="String" Name="id" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="contraseña" Nullable="false" MaxLength="10" />
+  </ComplexType>
+</Schema>

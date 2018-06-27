@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HorariosIModelStoreContainer" CdmEntityContainer="HorariosIEntities">
+    <EntitySetMapping Name="Aula">
+      <EntityTypeMapping TypeName="HorariosIModel.Aula">
+        <MappingFragment StoreEntitySet="Aula">
+          <ScalarProperty Name="IdAula" ColumnName="IdAula" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Capacidad_Aula" ColumnName="Capacidad_Aula" />
+          <ScalarProperty Name="IdPabellon" ColumnName="IdPabellon" />
+          <ScalarProperty Name="Id_tipo_aula" ColumnName="Id_tipo_aula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="capacidad">
+      <EntityTypeMapping TypeName="HorariosIModel.capacidad">
+        <MappingFragment StoreEntitySet="capacidad">
+          <ScalarProperty Name="idcapacidad" ColumnName="idcapacidad" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciclo">
+      <EntityTypeMapping TypeName="HorariosIModel.Ciclo">
+        <MappingFragment StoreEntitySet="Ciclo">
+          <ScalarProperty Name="IdCiclo" ColumnName="IdCiclo" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clasificacion">
+      <EntityTypeMapping TypeName="HorariosIModel.clasificacion">
+        <MappingFragment StoreEntitySet="clasificacion">
+          <ScalarProperty Name="idclasificacion" ColumnName="idclasificacion" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Curso">
+      <EntityTypeMapping TypeName="HorariosIModel.Curso">
+        <MappingFragment StoreEntitySet="Curso">
+          <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdEscuela" ColumnName="IdEscuela" />
+          <ScalarProperty Name="IdCiclo" ColumnName="IdCiclo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Descrip_Pabellon">
+      <EntityTypeMapping TypeName="HorariosIModel.Descrip_Pabellon">
+        <MappingFragment StoreEntitySet="Descrip_Pabellon">
+          <ScalarProperty Name="IdDescripPabellon" ColumnName="IdDescripPabellon" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dia">
+      <EntityTypeMapping TypeName="HorariosIModel.dia">
+        <MappingFragment StoreEntitySet="dia">
+          <ScalarProperty Name="iddia" ColumnName="iddia" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Docente">
+      <EntityTypeMapping TypeName="HorariosIModel.Docente">
+        <MappingFragment StoreEntitySet="Docente">
+          <ScalarProperty Name="IdCodigo" ColumnName="IdCodigo" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Estado_Servicio" ColumnName="Estado_Servicio" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="IdTipoDocente" ColumnName="IdTipoDocente" />
+          <ScalarProperty Name="IdGrado" ColumnName="IdGrado" />
+          <ScalarProperty Name="IdFacultad" ColumnName="IdFacultad" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="IdAula" ColumnName="IdAula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Escuela">
+      <EntityTypeMapping TypeName="HorariosIModel.Escuela">
+        <MappingFragment StoreEntitySet="Escuela">
+          <ScalarProperty Name="IdEscuela" ColumnName="IdEscuela" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdFacultad" ColumnName="IdFacultad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facultad">
+      <EntityTypeMapping TypeName="HorariosIModel.Facultad">
+        <MappingFragment StoreEntitySet="Facultad">
+          <ScalarProperty Name="IdFacultad" ColumnName="IdFacultad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fecha">
+      <EntityTypeMapping TypeName="HorariosIModel.fecha">
+        <MappingFragment StoreEntitySet="fecha">
+          <ScalarProperty Name="idfecha" ColumnName="idfecha" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fecha_inicio" ColumnName="fecha_inicio" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grado_Docente">
+      <EntityTypeMapping TypeName="HorariosIModel.Grado_Docente">
+        <MappingFragment StoreEntitySet="Grado_Docente">
+          <ScalarProperty Name="IdGrado" ColumnName="IdGrado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hora">
+      <EntityTypeMapping TypeName="HorariosIModel.hora">
+        <MappingFragment StoreEntitySet="hora">
+          <ScalarProperty Name="idhora" ColumnName="idhora" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="Hora_inicio" ColumnName="Hora_inicio" />
+          <ScalarProperty Name="Hora_fin" ColumnName="Hora_fin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pabellon">
+      <EntityTypeMapping TypeName="HorariosIModel.Pabellon">
+        <MappingFragment StoreEntitySet="Pabellon">
+          <ScalarProperty Name="IdPabellon" ColumnName="IdPabellon" />
+          <ScalarProperty Name="Capacidad_total_Pabellon" ColumnName="Capacidad_total_Pabellon" />
+          <ScalarProperty Name="Fecha_Registro" ColumnName="Fecha_Registro" />
+          <ScalarProperty Name="IdDescripPabellon" ColumnName="IdDescripPabellon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plan_Estudio">
+      <EntityTypeMapping TypeName="HorariosIModel.Plan_Estudio">
+        <MappingFragment StoreEntitySet="Plan_Estudio">
+          <ScalarProperty Name="IdPlan" ColumnName="IdPlan" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IdCurso" ColumnName="IdCurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recuperaciones">
+      <EntityTypeMapping TypeName="HorariosIModel.recuperaciones">
+        <MappingFragment StoreEntitySet="recuperaciones">
+          <ScalarProperty Name="idrecuperaciones" ColumnName="idrecuperaciones" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="fk_IdFecha" ColumnName="fk_IdFecha" />
+          <ScalarProperty Name="fk_d_Aula" ColumnName="fk_d_Aula" />
+          <ScalarProperty Name="IdHora" ColumnName="IdHora" />
+          <ScalarProperty Name="IdDia" ColumnName="IdDia" />
+          <ScalarProperty Name="IdCapacidad" ColumnName="IdCapacidad" />
+          <ScalarProperty Name="IdClasificacion" ColumnName="IdClasificacion" />
+          <ScalarProperty Name="IdSeccion" ColumnName="IdSeccion" />
+          <ScalarProperty Name="IdEscuela" ColumnName="IdEscuela" />
+          <ScalarProperty Name="Fk_idcurso" ColumnName="Fk_idcurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="seccion">
+      <EntityTypeMapping TypeName="HorariosIModel.seccion">
+        <MappingFragment StoreEntitySet="seccion">
+          <ScalarProperty Name="idseccion" ColumnName="idseccion" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="semestre">
+      <EntityTypeMapping TypeName="HorariosIModel.semestre">
+        <MappingFragment StoreEntitySet="semestre">
+          <ScalarProperty Name="idsemestre" ColumnName="idsemestre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_aula">
+      <EntityTypeMapping TypeName="HorariosIModel.tipo_aula">
+        <MappingFragment StoreEntitySet="tipo_aula">
+          <ScalarProperty Name="id_tipo_aula" ColumnName="id_tipo_aula" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Docente">
+      <EntityTypeMapping TypeName="HorariosIModel.Tipo_Docente">
+        <MappingFragment StoreEntitySet="Tipo_Docente">
+          <ScalarProperty Name="IdTipoDocente" ColumnName="IdTipoDocente" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="HorariosIModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_ValidarContraseña" FunctionName="HorariosIModel.Store.usp_ValidarContraseña">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HorariosIModel.usp_ValidarContraseña_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_ValidarUsuario" FunctionName="HorariosIModel.Store.usp_ValidarUsuario">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HorariosIModel.usp_ValidarUsuario_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

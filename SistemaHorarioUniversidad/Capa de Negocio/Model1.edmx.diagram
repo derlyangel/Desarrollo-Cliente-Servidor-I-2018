@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="64c48265c85c4605bb1d35ebb00944e5" Name="Diagram1">
+        <EntityTypeShape EntityType="HorariosIModel.Aula" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.capacidad" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Ciclo" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.clasificacion" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Curso" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Descrip_Pabellon" Width="1.5" PointX="1.5" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.dia" Width="1.5" PointX="8.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Docente" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Escuela" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Facultad" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.fecha" Width="1.5" PointX="8.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Grado_Docente" Width="1.5" PointX="0.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.hora" Width="1.5" PointX="8.25" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Pabellon" Width="1.5" PointX="1.5" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Plan_Estudio" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.recuperaciones" Width="1.5" PointX="10.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.seccion" Width="1.5" PointX="8.25" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.semestre" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.tipo_aula" Width="1.5" PointX="1.5" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.Tipo_Docente" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HorariosIModel.usuario" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="HorariosIModel.FK__Aula__Id_tipo_au__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Aula__IdPabellon__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Docente__IdAula__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__fk_d___628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__IdCap__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Curso__IdCiclo__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__IdCla__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Curso__IdEscuela__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Plan_Estu__IdCur__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__Fk_id__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Pabellon__IdDesc__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__IdDia__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Docente__IdFacul__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Docente__IdGrado__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Docente__IdTipoD__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__Escuela__IdFacul__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__IdEsc__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__fk_Id__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__IdHor__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="HorariosIModel.FK__recuperac__IdSec__6754599E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

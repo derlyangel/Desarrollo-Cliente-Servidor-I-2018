@@ -1,0 +1,9 @@
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\bin\Debug\Capa de Negocio.dll.config
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\bin\Debug\Capa de Negocio.dll
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\bin\Debug\Capa de Negocio.pdb
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\bin\Debug\EntityFramework.dll
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\bin\Debug\EntityFramework.xml
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\obj\Debug\Capa de Negocio.csprojResolveAssemblyReference.cache
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\obj\Debug\Capa de Negocio.csproj.CoreCompileInputs.cache
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\obj\Debug\Capa de Negocio.dll
+H:\Club de Programacion\SistemaHorarioUniversidad\Capa de Negocio\obj\Debug\Capa de Negocio.pdb

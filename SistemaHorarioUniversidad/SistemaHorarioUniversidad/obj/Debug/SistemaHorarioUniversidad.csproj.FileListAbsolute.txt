@@ -1,0 +1,38 @@
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe.config
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.pdb
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csprojResolveAssemblyReference.cache
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Form1.resources
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Properties.Resources.resources
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csproj.GenerateResource.Cache
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csproj.CoreCompileInputs.cache
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.exe
+c:\users\damon\source\repos\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.pdb
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe.config
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.exe
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.pdb
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.pdb
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csprojResolveAssemblyReference.cache
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Form1.resources
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Form2.resources
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Properties.Resources.resources
+F:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csproj.GenerateResource.Cache
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe.config
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.exe
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.pdb
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.pdb
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csprojResolveAssemblyReference.cache
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Form1.resources
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Form2.resources
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Properties.Resources.resources
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csproj.GenerateResource.Cache
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csproj.CoreCompileInputs.cache
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Datos.dll
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.dll
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\EntityFramework.dll
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Datos.pdb
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.pdb
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.dll.config
+H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\EntityFramework.xml
