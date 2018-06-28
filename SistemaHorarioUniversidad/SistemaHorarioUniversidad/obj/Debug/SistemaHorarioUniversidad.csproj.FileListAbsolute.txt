@@ -36,3 +36,34 @@ H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\
 H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.pdb
 H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.dll.config
 H:\Club de Programacion\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\EntityFramework.xml
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe.config
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.exe
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\SistemaHorarioUniversidad.pdb
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Datos.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar.SuperGrid.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.Instrumentation.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.SuperGrid.Design.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.TreeGX.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\EntityFramework.dll
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Datos.pdb
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.pdb
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\Capa de Negocio.dll.config
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar.Keyboard.xml
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar.Schedule.xml
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar.SuperGrid.xml
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\DevComponents.Instrumentation.xml
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\bin\Debug\EntityFramework.xml
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csprojResolveAssemblyReference.cache
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Form1.resources
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Form2.resources
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.frmDiasSemana.resources
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.Properties.Resources.resources
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csproj.GenerateResource.Cache
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.csproj.CoreCompileInputs.cache
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.exe
+C:\Users\Damon\OneDrive\Escritorio\SistemaHorarioUniversidad\SistemaHorarioUniversidad\obj\Debug\SistemaHorarioUniversidad.pdb

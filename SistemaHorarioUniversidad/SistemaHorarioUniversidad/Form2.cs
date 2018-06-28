@@ -28,5 +28,18 @@ namespace SistemaHorarioUniversidad
             Form1 obj = new Form1();
             obj.Show();
         }
+
+        private void horarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void diasPorSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            frmDiasSemana obj = new frmDiasSemana();
+            obj.MdiParent = this;
+            obj.Show();
+        }
     }
 }
